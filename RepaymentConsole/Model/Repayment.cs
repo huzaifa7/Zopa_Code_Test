@@ -3,14 +3,15 @@
     public class Repayment
     {
         public int RequestedAmount { get; }
-        public decimal AnnualInterestRate { get; }
+        public decimal AnnualInterestRateInPercent { get; }
         public decimal MonthlyRepayment { get; }
         public decimal TotalRepayment { get; }
 
-        public Repayment(int requestedAmount, decimal annualInterestRate, decimal monthlyRepayment, decimal totalRepayment)
+        public Repayment(int requestedAmount, decimal annualInterestRateInPercent, decimal monthlyRepayment,
+            decimal totalRepayment)
         {
             RequestedAmount = requestedAmount;
-            AnnualInterestRate = annualInterestRate;
+            AnnualInterestRateInPercent = annualInterestRateInPercent;
             MonthlyRepayment = monthlyRepayment;
             TotalRepayment = totalRepayment;
         }

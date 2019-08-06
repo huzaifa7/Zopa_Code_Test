@@ -23,7 +23,7 @@ namespace RepaymentConsole.UnitTests.Calculator
 
             // Assert
             Assert.Equal(amount, repayment.RequestedAmount);
-            Assert.Equal(interestRate, repayment.AnnualInterestRate);
+            Assert.Equal(interestRate, repayment.AnnualInterestRateInPercent);
             Assert.Equal(expectedmonthlyRepayment, repayment.MonthlyRepayment);
             Assert.Equal(expectedTotalRepayment, repayment.TotalRepayment);
         }

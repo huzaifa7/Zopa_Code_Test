@@ -45,7 +45,7 @@ namespace RepaymentConsole.Service
             {
                 var quoteFormatter = new StringBuilder();
                 quoteFormatter.AppendLine($"Requested amount: £{repayment.RequestedAmount}");
-                quoteFormatter.AppendLine($"Annual Interest Rate: {Math.Round(repayment.AnnualInterestRate, 1)}%");
+                quoteFormatter.AppendLine($"Annual Interest Rate: {Math.Round(repayment.AnnualInterestRateInPercent, 1)}%");
                 quoteFormatter.AppendLine($"Monthly repayment: £{Math.Round(repayment.MonthlyRepayment,2)}");
                 quoteFormatter.AppendLine($"Total repayment: £{Math.Round(repayment.TotalRepayment,2)}");
 
