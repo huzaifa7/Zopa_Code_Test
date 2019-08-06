@@ -7,7 +7,7 @@ namespace RepaymentConsole.UnitTests.Calculator
     public class InterestCalculatorShould
     {
         [Fact]
-        public void Return_Annual_Interest_Applicable_Based_On_Amount_Request()
+        public void Return_Total_Annual_Interest_Applicable_Based_On_Amount_Request()
         {
             // Arrange
             var amount = 200;
@@ -16,7 +16,7 @@ namespace RepaymentConsole.UnitTests.Calculator
             var expectedInterestedRate = 0.144m;
 
             // Act
-            var interestRate = interestCalculator.CalculateAnnualInterest(lenders, amount);
+            var interestRate = interestCalculator.CalculateTotalAnnualInterest(lenders, amount);
 
             // Assert
             Assert.Equal(expectedInterestedRate, interestRate);

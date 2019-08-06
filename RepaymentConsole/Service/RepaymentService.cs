@@ -32,9 +32,9 @@ namespace RepaymentConsole.Service
                 return "Sorry, it is not possible to provide a quote";
             }
 
-            var interestRate = _interestCalculator.CalculateAnnualInterest(lenders, amount);
+            var annualInterestRateInPercent = _interestCalculator.CalculateTotalAnnualInterest(lenders, amount);
 
-            var repayment = _repaymentCalculator.Calculate(interestRate, amount, TermInMonths);
+            var repayment = _repaymentCalculator.Calculate(annualInterestRateInPercent, amount, TermInMonths);
 
             return FormatQuote(repayment);
         }

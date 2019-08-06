@@ -12,8 +12,8 @@ namespace RepaymentConsole.UnitTests.Calculator
         {
             // Arrange
             decimal interestRate = 0.144m;
-            decimal expectedmonthlyRepayment = 34.3722275749651m;
-            decimal expectedTotalRepayment = 1237.40019269874m;
+            decimal expectedmonthlyRepayment = 27.8394876085315m;
+            decimal expectedTotalRepayment = 1002.22155390714m;
             int amount = 1000;
             int termInMonths = 36;
             IRepaymentCalculator repaymentCalculator = new RepaymentCalculator();

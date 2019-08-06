@@ -5,6 +5,6 @@ namespace RepaymentConsole.Calculator
 {
     public interface IInterestCalculator
     {
-        decimal CalculateAnnualInterest(IEnumerable<Lender> lenders, int amount);
+        decimal CalculateTotalAnnualInterest(IEnumerable<Lender> lenders, int amount);
     }
 }

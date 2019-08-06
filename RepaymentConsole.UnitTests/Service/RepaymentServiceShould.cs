@@ -44,7 +44,7 @@ namespace RepaymentConsole.UnitTests.Service
             _repaymentService.Process(_fileName, _amount);
 
             // Assert
-            _interestCalculatorMock.Verify(calculator => calculator.CalculateAnnualInterest(It.IsAny<IEnumerable<Lender>>(), _amount));
+            _interestCalculatorMock.Verify(calculator => calculator.CalculateTotalAnnualInterest(It.IsAny<IEnumerable<Lender>>(), _amount));
         }
 
         [Fact]
@@ -66,7 +66,7 @@ namespace RepaymentConsole.UnitTests.Service
             // Arrange
             var termInMonths = 36;
             var expectedRepayment = new Repayment(1000, 7.0m, 30.78m, 1108.10m);
-            _interestCalculatorMock.Setup(calculator => calculator.CalculateAnnualInterest(It.IsAny<IEnumerable<Lender>>(), _amount)).Returns(7.0m);
+            _interestCalculatorMock.Setup(calculator => calculator.CalculateTotalAnnualInterest(It.IsAny<IEnumerable<Lender>>(), _amount)).Returns(7.0m);
             _repaymentCalculatorMock.Setup(calculator => calculator.Calculate(7.0m, _amount, termInMonths))
                 .Returns(expectedRepayment);
 
